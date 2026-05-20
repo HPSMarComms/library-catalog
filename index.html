@@ -37,6 +37,21 @@
     min-height: 160px;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-img {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(198px, 33%, 363px);
+    height: auto;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  @media (max-width: 640px) {
+    .header-img { width: 110px; right: 10px; }
   }
   .header-content {
     position: relative;
@@ -290,6 +305,7 @@
 <body>
 
 <header>
+  <img class="header-img" src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1779285562/harmonytxorg/eoctcbu1hyiedeylviyu/LibraryCardIcon.png" alt="" aria-hidden="true" />
   <div class="header-content">
     <h1>Harmony Campus Library Online Catalog</h1>
     <p class="subhead">Harmony Public Schools provides this searchable online library catalog in accordance with Texas law and library standards to help parents and community members better understand the books and resources available in our school libraries.</p>
@@ -344,7 +360,7 @@
       <div class="page"></div>
       <div class="page"></div>
     </div>
-    <p>Loading campus library data&hellip;</p>
+    <p>Loading campus library data (approx. 5-10 seconds)&hellip;</p>
     <div class="loading-dots"><span></span><span></span><span></span></div>
   </div>
 </div>
